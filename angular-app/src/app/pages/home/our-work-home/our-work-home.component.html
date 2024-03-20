@@ -1,0 +1,20 @@
+<section class="our_work">
+  <div class="container">
+    <div class="our_work-heading row align-center">
+      <h4 class="work-title heading-col">{{data.title}}</h4>
+      <p class="work-desc heading-col">{{data.description}}</p>
+    </div>
+
+    <div class="our_work-images">
+      @for (item of data.images; track item.image_name){
+      <div class="image-item">
+        <img class="img" src={{item.image_name}} />
+      </div>
+      }
+    </div>
+
+    <button class="d-flex our_work-button btn-color btn-primary">
+      VIEW OUR WORK
+    </button>
+  </div>
+</section>

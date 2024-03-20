@@ -1,0 +1,33 @@
+<header [class.fixed]="isFixed" class="header">
+  <div class="wrapper row align-center justify-between">
+    <a routerLink="/">
+      <img src="assets/images/logo.svg" alt="Logo" class="logo" />
+    </a>
+
+    <nav class="menus">
+      <ul class="menus-list">
+
+        <li class="menus-item selected" *ngFor="let item of menus">
+          <a routerLink="{{ item.slug }}" class=" menu-links">
+            {{ item?.menu_name }}
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="actions row align-center">
+      <button type="button" label="search" class="actions-btn btn-serach btn-primary">
+        <img src="assets/icons/icon-search.svg" />
+      </button>
+
+      <button type="button" label="bag" class="actions-btn btn-bag btn-primary">
+        <img src="assets/icons/icon-bag.svg" />
+      </button>
+
+      <a label="sign" class="actions-btn btn-sign btn-color btn-primary">
+        SIGN UP
+      </a>
+    </div>
+  </div>
+</header>

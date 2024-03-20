@@ -1,0 +1,50 @@
+<aside class="sidebar">
+  <div class="sidebar_brand">
+    <div class="sidebar_heading d-flex align-center justify-between">
+      <h3 class="sidebar_heading-title">Category</h3>
+      <div class="sidebar_heading-collapse d-flex" (click)="handleCollapse($event)">
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M9.70711 5.70711C9.34662 6.06759 8.77939 6.09532 8.3871 5.7903L8.29289 5.70711L5 2.415L1.70711 5.70711C1.34662 6.06759 0.779391 6.09532 0.3871 5.79029L0.292893 5.70711C-0.0675907 5.34662 -0.0953206 4.77939 0.209705 4.3871L0.292894 4.29289L4.29289 0.292893C4.65338 -0.0675912 5.22061 -0.0953211 5.6129 0.209704L5.70711 0.292893L9.70711 4.29289C10.0976 4.68342 10.0976 5.31658 9.70711 5.70711Z"
+            fill="#888682" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="sidebar_filter">
+      <ul class="sidebar_filter-list">
+        <li class="sidebar_filter-item" *ngFor="let item of categories">
+          <input type="checkbox" name="" id="{{item.category_name}}" [value]="item.category_id"
+            (change)="handleCheckedCategory(item.category_id)"
+            [checked]="selectedCategoryIds.includes(item.category_id)">
+          <label for="{{item.category_name}}"
+            class="sidebar_filter-title">{{item.category_name}}</label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar_heading d-flex align-center justify-between">
+      <h3 class="sidebar_heading-title">Brand</h3>
+      <div class="sidebar_heading-collapse d-flex" (click)="handleCollapse($event)">
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M9.70711 5.70711C9.34662 6.06759 8.77939 6.09532 8.3871 5.7903L8.29289 5.70711L5 2.415L1.70711 5.70711C1.34662 6.06759 0.779391 6.09532 0.3871 5.79029L0.292893 5.70711C-0.0675907 5.34662 -0.0953206 4.77939 0.209705 4.3871L0.292894 4.29289L4.29289 0.292893C4.65338 -0.0675912 5.22061 -0.0953211 5.6129 0.209704L5.70711 0.292893L9.70711 4.29289C10.0976 4.68342 10.0976 5.31658 9.70711 5.70711Z"
+            fill="#888682" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="sidebar_filter">
+      <ul class="sidebar_filter-list">
+        <li class="sidebar_filter-item" *ngFor="let item of dataBrand">
+          <input type="checkbox" name="" id="{{item.brand_name}}" [value]="item.brand_id"
+            (change)="handleCheckedBrand(item.brand_id)"
+            [checked]="selectedBrandIds.includes(item.brand_id)">
+          <label for="{{item.brand_name}}" class="sidebar_filter-title">{{item.brand_name}}</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>

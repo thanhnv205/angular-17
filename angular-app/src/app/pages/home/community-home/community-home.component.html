@@ -1,0 +1,49 @@
+<section class="wrapper section">
+  <div class="community">
+    <h2 class="community-heading">
+      @for (item of changeHeading(); track item){
+      <span [class]="{ 'highlight': item === data.highlight }">{{ item }}</span>
+      }
+    </h2>
+
+    <div class="community_content row justify-center">
+      <div class="community_content-left d-flex flex-column justify-center align-center">
+        <div class="wrapper-content">
+          <h4 class="left-title heading">{{data.title}}</h4>
+          <p class="left-desc">{{data.description}}</p>
+          <a href={{data.slug}} class="left-link">
+            <span>DISCOVER NOW</span>
+            <app-svg-arrow-link />
+          </a>
+
+          <div class="left-btns row align-center">
+            <button class="btn-slider d-flex align-center justify-center">
+              <app-svg-btn-left />
+            </button>
+
+            <button class="btn-slider d-flex align-center justify-center selected">
+              <app-svg-btn-right />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="community_content-right">
+        @for (item of data.communities; track item) {
+        <div class="right-item">
+          <div class="box-item">
+            <div class="box-image d-flex justify-center align-center">
+              <img class="bg-primary" src={{item.image_name}} />
+              <img class="bg-gradient" src="../../../assets/images/gradient.png" />
+            </div>
+
+            <div class="box-content">
+              <h4 class="right-title">{{item.title}}</h4>
+              <p class="right-desc">{{item.description}}</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

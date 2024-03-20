@@ -1,0 +1,34 @@
+@color-price: #333333;
+@color-line: #E7E5EA;
+
+.product {
+  width: 100%;
+  display: grid;
+  gap: 45px 30px;
+  padding-bottom: 45px;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3 - 30px), 1fr));
+  border-bottom: 1px solid @color-line;
+  &_item {
+    width: 100%;
+    &-image {
+     & img {
+      max-width: 100%;
+     } 
+    }
+    &-info {
+      margin-top: 10px;
+      & .info_name {
+        font-size: 1.8rem;
+        line-height: 28px;
+        font-weight: 500;
+        letter-spacing: -.4px;
+      }
+      & .info_price {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 26px;
+        color: @color-price;
+      }
+    }
+  }
+}

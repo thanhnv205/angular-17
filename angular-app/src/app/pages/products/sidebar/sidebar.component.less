@@ -1,0 +1,41 @@
+@color-line: #E7E5EA;
+@color-primary: #7B88A8;
+
+.sidebar {
+  &_heading {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid @color-line;
+    &.selected + .sidebar_filter {
+      max-height: 0;
+      overflow: hidden;
+    }
+    &-title {
+      font-size: 1.8rem;
+      line-height: 28px;
+      letter-spacing: .4px;
+      font-weight: 500;
+    }
+    &-collapse {
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &_filter {
+    max-height: 500px;
+    margin-bottom: 40px;
+    transition: max-height 0.4s ease;
+    &-item:not(:first-child) {
+      padding-top: 10px;
+    }
+    &-title {
+      font-size: 1.4rem;
+      line-height: 24px;
+      letter-spacing: -0.3px;
+      margin-left: 10px;
+      color: @color-primary;
+      cursor: pointer;
+    }
+  }
+}

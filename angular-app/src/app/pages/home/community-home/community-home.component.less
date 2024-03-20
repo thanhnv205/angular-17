@@ -1,0 +1,112 @@
+@color-highlight: #f0b8ee;
+@color-blur: #788190;
+@color-link: #886CFF;
+@letter-spacing: -0.3px;
+@size-btn-slider: 56px;
+@line-btn-slider: #E7E5EA;
+@line-bottom: #E7E7E7;
+
+.community {
+  &-heading {
+    max-width: 970px;
+    font-size: 7.2rem;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    letter-spacing: -2px;
+    &>span {
+      padding: 0 3px;
+    }
+    & .highlight {
+      color: @color-highlight;
+    }
+  }
+  &_content {
+    position: relative;
+    padding-bottom: 80px;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: calc(100% - 170px);
+      height: 2px;
+      background-color: @line-bottom;
+    }
+    &-left {
+      width: 40%;
+      & .wrapper-content {
+        max-width: 385px;
+      }
+      & .left-desc {
+        margin-top: 25px;
+        font-size: 1.8rem;
+        color: @color-blur;
+        letter-spacing: @letter-spacing;
+      }
+      & .left-btns {
+        margin-top: 80px;
+      }
+      & .left-link {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-top: 40px;
+        color: @color-link;
+        font-weight: 500;
+        letter-spacing: @letter-spacing;
+        & span {
+          margin-right: 15px;
+        }
+      }
+      & .btn-slider {
+        width: @size-btn-slider;
+        height: @size-btn-slider;
+        border-radius: 50%;
+        border-color: @line-btn-slider;
+        line-height: 1;
+        &:first-child {
+          margin-right: 15px;
+        }
+        &.selected {
+          border-color: transparent;
+          box-shadow: 0 15px 20px 10px #f1eefa
+        }
+      }
+    }
+    &-right {
+      position: relative;
+      flex: 1;
+      & .box-image {
+        padding: 80px 0 60px;
+        & .bg-primary {
+          max-width: 670px;
+          position: relative;
+          z-index: 1;
+        }
+        & .bg-gradient {
+          position: absolute;
+          left: -215px;
+          top: -120px;
+        }
+      }
+      & .box-content {
+        max-width: 570px;
+        padding-left: 90px;
+      }
+
+      & .right-item {
+        & .right-title {
+          font-size: 2.2rem;
+          font-weight: 500;
+          letter-spacing: -1px;
+        }
+        & .right-desc {
+          font-size: 1.8rem;
+          color: @color-blur;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

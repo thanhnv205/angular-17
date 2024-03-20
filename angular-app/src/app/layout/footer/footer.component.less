@@ -1,0 +1,92 @@
+@bg-footer: #292F3A;
+@color-primary: #E7E5EA;
+@color-placeholder: #7B88A8;
+@line-footer: #7B88A8;
+@bg-social: #886CFF;
+@size-icon-social: 52px;
+
+.footer {
+  margin-top: 80px;
+  color: @color-primary;
+  background-color: @bg-footer;
+  &_wrapper {
+    padding-top: 90px;
+    &-menu {
+      gap: 30px;
+      padding-bottom: 90px;
+    }
+    &-social {
+      padding: 40px 0;
+      border-top: 1px solid @line-footer;
+      & .copy-right {
+        font-size: 1.6rem;
+        line-height: 26px;
+        font-weight: 400;
+      }
+      & .social-list {
+        gap: 20px;
+        & a {
+          width: @size-icon-social;
+          height: @size-icon-social;
+          background-color: @bg-social;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  &_item {
+    width: 170px;
+    &:last-child {
+      flex: 1;
+    }
+    &-title {
+      font-size: 2.2rem;
+      letter-spacing: -1px;
+      line-height: 32px;
+      font-weight: 400;
+    }
+    &-list {
+      padding-top: 5px;
+      & li {
+        margin-top: 5px;
+      }
+      & a {
+        color: @color-primary;
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: -0.3px;
+        line-height: 24px;
+        text-transform: uppercase;
+      }
+    }
+    &-desc {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 26px;
+    }
+    &-form {
+      gap: 5px;
+      margin: 25px 0;
+      & input {
+        width: 235px;
+        border: 0;
+        padding: 12px 20px;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        background-color: @color-primary;
+        border-radius: 5px;
+        &::placeholder {
+          color: @color-placeholder;
+        }
+      }
+    }
+    &-remind {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.3px;
+    }
+  }
+}
