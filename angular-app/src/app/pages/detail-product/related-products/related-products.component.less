@@ -1,0 +1,20 @@
+@color-heading: #2D3958;
+
+.related {
+  margin-top: 80px;
+  &_heading {
+    font-size: 4.2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 50px;
+    font-weight: 500;
+    color: @color-heading;
+    letter-spacing: -2%;
+  }
+
+  &_list {
+    display: grid;
+    gap: 45px 30px;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 4 - 30px), 1fr));
+  }
+}

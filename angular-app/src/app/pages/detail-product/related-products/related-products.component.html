@@ -1,0 +1,17 @@
+<section class="related">
+  <h1 class="related_heading">Here you can buy similar products</h1>
+
+  <div class="related_list d-grid align-center">
+    <div class="related_list-item" *ngFor="let product of data">
+      <div [routerLink]="['/product', product.slug]">
+        <div class="product_item-image">
+          <img src="{{product.product_image}}" alt="{{product.product_name}}" />
+        </div>
+        <div class="product_item-info text-center">
+          <p class="info_name">{{product.product_name}}</p>
+          <p class="info_price">{{product.product_price | price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

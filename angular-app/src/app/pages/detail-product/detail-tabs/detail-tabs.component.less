@@ -1,0 +1,37 @@
+@color-line: #E7E5EA;
+@color-head: #2D3958;
+@color-body: #7B88A8;
+@bg-selected: #34C635;
+
+.tab {
+  margin-top: 80px;
+  &_head {
+    gap: 40px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid @color-line;
+    &-title {
+      position: relative;
+      padding: 15px 0;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: @color-head;
+      &.selected {
+        &&::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 10px;
+          height: 10px;
+          background-color: @bg-selected;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  &_body {
+    padding: 30px 0 50px;
+    font-size: 1.6rem;
+    color: @color-body;
+    border-bottom: 1px solid @color-line;
+  }
+}

@@ -1,0 +1,126 @@
+@size-item-option: 40px;
+@color-primary: #7B88A8;
+@color-secondary: #4F77FF;
+
+@color-product-name: #2D3958;
+@color-line: #E7E5EA;
+
+.detail {
+  grid-template-columns: 1fr 1fr;
+
+  &_images {
+    &-aspect {
+      margin-bottom: 30px;
+    }
+    &-list {
+      gap: 30px;
+      & .images-thumb_item {
+        width: calc(100% / 4 - 15px);
+      }
+    }
+  }
+  &_content {
+    padding-left: 12rem;
+    &-name {
+      font-size: 4.2rem;
+      font-weight: 500;
+      letter-spacing: -2%;
+      line-height: 50px;
+      color: @color-product-name;
+      margin-bottom: 10px;
+    }
+
+    &-price {
+      color: @color-primary;
+      font-size: 1.8rem;
+      letter-spacing: -.3px;
+      font-weight: 400;
+    }
+
+    &-star {
+      padding: 30px 0;
+    }
+
+    &-desc {
+      color: @color-primary;
+      font-size: 1.6rem;
+      line-height: 26px;
+      font-weight: 400;
+      padding-bottom: 15px;
+      & .see-more {
+        color: @color-secondary;
+        font-size: 1.6rem;
+      }
+    }
+
+    &-options {
+      margin: 20px 0 10px;
+      & .options_heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: .4px;
+        margin-bottom: 20px;
+      }
+      & .options_list {
+        gap: 10px;
+        &-item{
+          width: @size-item-option;
+          height: @size-item-option;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &-actions {
+      padding: 35px 0;
+      & .quantity {
+        max-width: 76px;
+        padding: 10px 10px;
+        font-size: 1.6rem;
+        line-height: 26px;
+        outline: 0;
+        border-radius: 5px;
+        color: @color-primary;
+        border: 1px solid @color-line;
+      }
+      & .btn-addtocart {
+        width: 129px;
+        min-height: 48px;
+        margin-left: 10px;
+        color: #fff;
+        border-radius: 7px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: -.3px;
+        background-color: @color-secondary;
+        cursor: pointer;
+      }
+    }
+
+    &-share {
+      & .wishlist {
+        padding-right: 40px;
+        margin-right: 40px;
+        border-right: 1px solid @color-line;
+      }
+      & .share {
+        gap: 20px;
+      }
+    }
+    
+    &-more {
+      gap: 25px;
+      font-size: 1.6rem;
+      margin-top: 50px;
+      padding: 15px 0;
+      font-weight: 500;
+      color: @color-product-name;
+      border-top: 1px solid @color-line;
+      border-bottom: 1px solid @color-line;
+      & .highlight {
+        color: @color-secondary;
+      }
+    }
+  }
+}
